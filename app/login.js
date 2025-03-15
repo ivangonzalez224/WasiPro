@@ -72,14 +72,14 @@ export default function LoginScreen() {
       <View style={styles.form}>
         <TextInput
           placeholder="Nombre de usuario"
-          placeholderTextColor="#ccc"
+          placeholderTextColor="#E65A2C"
           style={styles.input}
           value={username}
           onChangeText={setUsername}
         />
         <TextInput
           placeholder="Contraseña"
-          placeholderTextColor="#ccc"
+          placeholderTextColor="#E65A2C"
           style={styles.input}
           secureTextEntry
           value={password}
@@ -92,7 +92,7 @@ export default function LoginScreen() {
           disabled={loading}
         >
           {loading ? (
-            <ActivityIndicator color="#000" />
+            <ActivityIndicator color="#FFF" />
           ) : (
             <Text style={styles.buttonText}>Iniciar sesión</Text>
           )}
@@ -101,3 +101,45 @@ export default function LoginScreen() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  logoContainer: {
+    marginBottom: 30,
+  },
+  logo: {
+    width: 120,
+    height: 120,
+    resizeMode: 'contain',
+  },
+  form: {
+    width: '85%',
+  },
+  input: {
+    backgroundColor: '#222',
+    borderRadius: 8,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    marginBottom: 15,
+    borderColor: '#E65A2C',
+    borderWidth: 1,
+    color: '#FFF',
+  },
+  button: {
+    backgroundColor: '#FF6B35',
+    paddingVertical: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
