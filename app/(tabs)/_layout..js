@@ -24,7 +24,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="reservas"
+        name="reservations"
         options={{
           title: 'Reservas',
           headerShown: false,
