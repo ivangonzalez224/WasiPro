@@ -19,7 +19,7 @@ export default function TabsLayout() {
           headerShown: false,
           tabBarLabel: 'Explorar',
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="map" size={size} color={color} />
+            <FontAwesome name="bell" size={size} color={color} />
           ),
         }}
       />
@@ -30,7 +30,7 @@ export default function TabsLayout() {
           headerShown: false,
           tabBarLabel: 'Reservas',
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="user" size={size} color={color} />
+            <FontAwesome name="calendar-check-o" size={size} color={color} />
           ),
         }}
       />
