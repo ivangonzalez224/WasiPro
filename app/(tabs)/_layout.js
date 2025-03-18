@@ -34,6 +34,17 @@ export default function TabsLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="messages"
+        options={{
+          title: 'Mensajes',
+          headerShown: false,
+          tabBarLabel: 'Mensajes',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="envelope" size={size} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
