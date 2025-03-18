@@ -72,14 +72,14 @@ export default function LoginScreen() {
       <View style={styles.form}>
         <TextInput
           placeholder="Nombre de usuario"
-          placeholderTextColor="#E65A2C"
+          placeholderTextColor="#ccc"
           style={styles.input}
           value={username}
           onChangeText={setUsername}
         />
         <TextInput
           placeholder="Contraseña"
-          placeholderTextColor="#E65A2C"
+          placeholderTextColor="#ccc"
           style={styles.input}
           secureTextEntry
           value={password}
