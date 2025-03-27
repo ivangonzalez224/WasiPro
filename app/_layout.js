@@ -5,6 +5,8 @@ import store, { login } from '../redux/store';
 import { useEffect, useState } from 'react';
 import * as SecureStore from 'expo-secure-store';
 import { MenuProvider } from 'react-native-popup-menu';
+import 'react-native-gesture-handler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 function MainLayout() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -30,12 +32,14 @@ function MainLayout() {
   }, [isLoggedIn, loading, router]);
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" />
-        <Stack.Screen name="login" />
-      </Stack>
-    </SafeAreaView>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="login" />
+        </Stack>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 }
 

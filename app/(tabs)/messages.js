@@ -5,6 +5,13 @@ import * as SecureStore from 'expo-secure-store';
 import { collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 
+import Animated, {
+  useSharedValue,
+  withTiming,
+  useAnimatedStyle,
+  Easing,
+} from 'react-native-reanimated';
+
 export default function MessagesScreen() {
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState('');

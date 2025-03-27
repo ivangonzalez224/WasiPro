@@ -3,6 +3,11 @@
     "name": "WasiPro",
     "slug": "WasiPro",
     "version": "0.0.1",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "scheme": "daterogo",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,13 +18,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ivangonzalez22.WasiPro"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ivangonzalez22.WasiPro"
     },
     "web": {
       "favicon": "./assets/favicon.png"

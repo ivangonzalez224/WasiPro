@@ -29,7 +29,7 @@ export default function LoginScreen() {
 
     setLoading(true);
     const scriptURL =
-      'https://script.com/exec';
+      'https://script.google.com/macros/s/AKfycbzf8ehnVdrs58knmTMO3j-upAQJk8TNAo8BVdDanEsL06WxiRa0TOgdOzs4RMOHpuza/exec';
 
     const formData = new FormData();
     formData.append('dpto', username);
@@ -44,13 +44,14 @@ export default function LoginScreen() {
 
       const result = await response.json();
       if (result.result === 'success') {
-        await SecureStore.setItemAsync(
-          'userData',
-          JSON.stringify([username, result.dpto, result.id]),
-        );
+        console.log(result.message);
+        // await SecureStore.setItemAsync(
+        //   'userData',
+        //   JSON.stringify([username, result.dpto, result.id]),
+        // );
 
-        dispatch(login());
-        router.push('/(tabs)');
+        // dispatch(login());
+        // router.push('/(tabs)');
       } else {
         Alert.alert('Error', 'Credenciales incorrectas');
       }
