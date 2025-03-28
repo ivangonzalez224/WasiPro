@@ -1,4 +1,4 @@
-package com.wasipro
+package com.ivangonzalez22.WasiPro
 
 import android.os.Build
 import android.os.Bundle

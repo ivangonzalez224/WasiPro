@@ -1,4 +1,4 @@
-package com.wasipro
+package com.ivangonzalez22.WasiPro
 
 import android.app.Application
 import android.content.res.Configuration
